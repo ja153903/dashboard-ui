@@ -26,15 +26,20 @@ class MarkdownEditor extends Component {
     return (
       <div>
         <p>Enter the markdown text here: </p>
-        <div>
+        <div className='container' style={{
+          display: 'flex',
+          justifyContent: 'space-evenly'
+        }}>
           <form>
             <textarea
+              rows='20'
+              cols='150'
               type='text' 
               value={ this.state.markdownInput } 
               onChange={ e => this.handleChange(e) } />
           </form>
+          <Markdown markup={ this.state.markdownInput } />
         </div>
-        <Markdown markup={ this.state.markdownInput } />
       </div>
     )
   }
