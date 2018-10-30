@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import MarkdownEditor from './MarkdownEditor'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
+      <div className='App'>
         <MarkdownEditor />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
